@@ -61,7 +61,7 @@ int main(int argc, char** argv)
 	ros::init(argc, argv, "lio_sam_transformation_exporter_node");
 
 	ros::NodeHandle nodeHandle;
-	ros::NodeHandle privateNodeHandle;
+	ros::NodeHandle privateNodeHandle("~");
 
 	std::string finalTransformationFileName;
 	privateNodeHandle.param<std::string>("final_transformation_file_name", finalTransformationFileName, "final_transformation.txt");
